@@ -1,0 +1,28 @@
+[
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": false,
+				"internalType": "string",
+				"name": "log",
+				"type": "string"
+			}
+		],
+		"name": "EventLog",
+		"type": "event"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "string",
+				"name": "log",
+				"type": "string"
+			}
+		],
+		"name": "writeLog",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	}
+]
