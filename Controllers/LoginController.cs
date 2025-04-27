@@ -1,7 +1,7 @@
-using Base;
 using Base.Models;
 using Base.Services;
 using BaseApi.Controllers;
+using BaseApi.Services;
 using EarthAdmApi.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.IdentityModel.Tokens;
@@ -42,7 +42,7 @@ where Account=@Account
             #region 2.get base user info and write into session
             var userId = row["UserId"]!.ToString();
             var userName = row["UserName"]!.ToString();
-            var authStrs = await _XgProg.GetAuthStrsA(userId, db);
+            var authStrs = await _Auth.GetAuthStrsA(userId, db);
             var userInfo = new BaseUserDto()
             {
                 UserId = userId,

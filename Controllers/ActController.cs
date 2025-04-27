@@ -70,7 +70,7 @@ namespace EarthAdmApi.Controllers
             //check auth first
             var tran = false;
             var db = new Db();
-            var error = await _XgProg.CheckAuthUserA(Ctrl, CrudEnum.Update, "Act", "Creator", key, db);
+            var error = await _Auth.CheckAuthUserA(Ctrl, CrudEnum.Update, "Act", "Creator", key, db);
             if (error != "") goto lab_error;
 
             //檢查: Item實際庫存+在途庫存必須大於ActItem.Amount

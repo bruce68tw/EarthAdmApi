@@ -65,7 +65,8 @@ and a.Amount > i.StockAmount
                 return _Model.GetError($"物品的實際庫存必須大於出貨數量({_List.ToStr(names, false)})");
 
             _outputId = key;
-            return await EditService().UpdateA(key, json, null, FnAfterSaveA);
+            //return await EditService().UpdateA(key, json, null, FnAfterSaveA);
+            return await EditService().UpdateA(key, json);
         }
 
         /// <summary>

@@ -59,7 +59,8 @@ order by i.Id
         {
             _key = key;
             var status = (_Json.GetRows0(json)!["AuditStatus"]!.ToString() == "Y");
-            return await EditService().UpdateA(key, json, null, status ? FnAfterSaveA : null);
+            //return await EditService().UpdateA(key, json, null, status ? FnAfterSaveA : null);
+            return await EditService().UpdateA(key, json);
         }
 
         //update item.StockWayAmount(在途庫存) if AuditStatus=1
